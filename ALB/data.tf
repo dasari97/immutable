@@ -3,7 +3,7 @@ data "terraform_remote_state" "vpc" {
 
   config = {
     bucket = "dasari1998"
-    key    = "Terraform-mutable/vpc/${var.env}/${var.env}_state_file_backup"
+    key    = "Terraform-immutable/vpc/${var.env}/${var.env}_state_file_backup"
     region = "us-east-1"
   }
 }
