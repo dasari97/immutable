@@ -1,5 +1,4 @@
 resource "aws_autoscaling_group" "asg" {
-  depends_on                = 
   name                      = "${var.component}-${var.env}-asg"
   max_size                  = 1
   min_size                  = 1
