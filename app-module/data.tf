@@ -14,15 +14,15 @@ data "terraform_remote_state" "vpc" {
   }
 }
 
-#data "terraform_remote_state" "ALB" {
-#  backend = "s3" 
+data "terraform_remote_state" "ALB" {
+  backend = "s3" 
 
-#  config = {
-#    bucket = "dasari1998"
-#    key    = "Terraform-immutable/ALB/${var.env}/${var.env}_state_file_backup"
-#    region = "us-east-1"
-#  }
-#}
+  config = {
+    bucket = "dasari1998"
+    key    = "Terraform-immutable/ALB/${var.env}/${var.env}_state_file_backup"
+    region = "us-east-1"
+  }
+}
 
 data "aws_secretsmanager_secret" "Dev_secret" {
   name = var.env

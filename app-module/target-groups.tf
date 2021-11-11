@@ -14,13 +14,6 @@ resource "aws_lb_target_group" "target-group" {
   }
 }
 
-/*resource "aws_lb_target_group_attachment" "instanceAttach" {
-  count = length(local.all_instance_id)
-  target_group_arn = aws_lb_target_group.target-group.arn
-  target_id        = element(local.all_instance_id, count.index)
-  port             = var.port
-}
-
 resource "aws_lb_listener_rule" "LB_IN_RULES" {
  count   = var.is_internal == "true" ? 1 : 0
   listener_arn = data.terraform_remote_state.ALB.outputs.Internal-Listener
@@ -36,4 +29,4 @@ resource "aws_lb_listener_rule" "LB_IN_RULES" {
       values = ["${var.component}-${var.env}.krishna.roboshop"]
     }
   }
-}*/
+}

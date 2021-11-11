@@ -5,3 +5,5 @@ variable "port" {}
 //variable "is_internal" {}
 //variable "priority" {}
 variable "APP_VERSION" {}
+variable "is_internal" {}
+variable "priority" {}
