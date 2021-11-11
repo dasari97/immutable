@@ -1,8 +1,8 @@
 resource "aws_autoscaling_group" "asg" {
   name                      = "${var.component}-${var.env}-asg"
-  max_size                  = 1
-  min_size                  = 1
-  desired_capacity          = 1
+  max_size                  = var.max_size
+  min_size                  = var.min_size
+  desired_capacity          = var.desired_capacity
   target_group_arns          = [aws_lb_target_group.target-group.arn]
   vpc_zone_identifier       = data.terraform_remote_state.vpc.outputs.private_subnet_ids
   

@@ -2,8 +2,9 @@ variable "env" {}
 variable "instance_type" {}
 variable "component" {}
 variable "port" {}
-//variable "is_internal" {}
-//variable "priority" {}
-variable "APP_VERSION" {}
 variable "is_internal" {}
 variable "priority" {}
+variable "APP_VERSION" {}
+variable "max_size" {}
+variable "min_size" {}
+variable "desired_capacity" {}
