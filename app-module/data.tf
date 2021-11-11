@@ -1,6 +1,6 @@
 data "aws_ami" "ami" {
   most_recent      = true
-  name_regex       = "${var.component}-1*"
+  name_regex       = "${var.component}-${var.APP_VERSION}"
   owners           = ["self"]
   }
   
