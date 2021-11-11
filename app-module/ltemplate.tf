@@ -16,7 +16,7 @@ resource "aws_launch_template" "template" {
     }
   }
 
-//  user_data = filebase64("${path.module}/example.sh")
+  user_data = filebase64("${path.module}/env-${var.env}.sh")
 }
 
 resource "aws_security_group" "app" {
