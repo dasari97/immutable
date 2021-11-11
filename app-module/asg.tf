@@ -17,10 +17,3 @@ resource "aws_autoscaling_group" "asg" {
   }
 }
 
-output "APP_VERSION" {
-  value = var.APP_VERSION
-}
-
-output "component" {
-  value = var.component
-}

@@ -80,3 +80,11 @@ resource "aws_security_group" "app" {
     Name = "${var.component}-${var.env}-template"
   }
 }
+
+output "APP_VERSION" {
+  value = var.APP_VERSION
+}
+
+output "component" {
+  value = var.component
+}
