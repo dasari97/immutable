@@ -3,6 +3,7 @@ resource "aws_autoscaling_group" "asg" {
   max_size                  = 1
   min_size                  = 1
   desired_capacity          = 1
+  target_group_arn          = aws_lb_target_group.target_group.arn
   vpc_zone_identifier       = data.terraform_remote_state.vpc.outputs.private_subnet_ids
   
   launch_template   {
